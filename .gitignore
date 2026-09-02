@@ -1,0 +1,15 @@
+# Generated example products
+/work/
+*_h2l.mat
+nii_out*/
+SRR_out*/
+reconstruction*/
+output*/
+
+# Logs and MATLAB/editor metadata
+*.log
+*.asv
+*.m~
+.vscode/
+.idea/
+.DS_Store
