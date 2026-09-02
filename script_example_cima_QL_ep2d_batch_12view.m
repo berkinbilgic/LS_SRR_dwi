@@ -3,6 +3,16 @@
 clear
 
 repo_dir = fileparts(mfilename('fullpath'));
+data_relative_dir = fullfile('example_data', 'ep2d_12view_phantom', 'nii');
+if ~isfolder(fullfile(repo_dir, data_relative_dir))
+    active_file = matlab.desktop.editor.getActiveFilename;
+    [active_dir, active_name, active_ext] = fileparts(active_file);
+    expected_script_name = 'script_example_cima_QL_ep2d_batch_12view.m';
+    if strcmp([active_name, active_ext], expected_script_name) && isfolder(fullfile(active_dir, data_relative_dir))
+        repo_dir = active_dir;
+    end
+end
+
 data_dir_R3 = fullfile(repo_dir, 'example_data', 'ep2d_12view_phantom', 'nii');
 work_dir = fullfile(repo_dir, 'work', 'ep2d_12view_phantom');
 
