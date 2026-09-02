@@ -20,6 +20,8 @@ Generated preprocessing files, per-view `h2l` operators, diagnostics, and recons
 work/ep2d_12view_phantom/SRR_out_views2use_6/1/srr_direction_1_la0.05.nii.gz
 ```
 
+Per-view `h2l` operators are computed automatically when missing and, by default, reused on subsequent runs. Reuse is determined only by the existence of the corresponding `*_h2l.mat` file; the cached operator is not checked against the current NIfTI header geometry. If preprocessing or geometry changes, regenerate the operators before reconstruction by setting `opt_srr.use_existing_h2l = 0` in the example script for that run.
+
 No precomputed transforms or reconstruction outputs are committed.
 
 ### Output geometry compatibility note
