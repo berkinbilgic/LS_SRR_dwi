@@ -1,0 +1,4 @@
+# Preserve the vendored FreeSurfer 6.0.0 files byte-for-byte. Their upstream
+# sources and license contain trailing spaces that are not repository errors.
+third_party/freesurfer_matlab/** -whitespace
+mosaic.m -whitespace
